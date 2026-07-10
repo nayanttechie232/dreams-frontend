@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import './style.css';
 import './stars.css';
 
-const api = 'http://localhost:5000/api';
+const api = 'https://dreams-backend-57s8.onrender.com';
 const defaultCover = 'https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1000&q=85';
 const blankPage = () => ({ topText: '', leftText: '', rightImage: '', leftImage: '', rightText: '', bottomText: '' });
 const demo = { _id: 'welcome', title: 'A place for dreams', subtitle: 'Made of words, light, and the moments between.', coverImage: defaultCover, author: { username: 'papermoon' }, pages: [{ topText: 'Welcome to PaperMoon', leftText: 'Every dream deserves room to breathe. Build yours page by page, in your own rhythm.', rightImage: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1000&q=80', leftImage: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1000&q=80', rightText: 'Write a small beginning, then let your photographs hold the details words cannot.', bottomText: 'This is your little corner of the moon.' }] };
