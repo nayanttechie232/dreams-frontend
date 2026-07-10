@@ -50,7 +50,13 @@ function App() {
  const save=async()=>{if(story._id.startsWith('local-'))return;try{const fresh=await call(`/dreams/${story._id}`,{method:'PUT',body:JSON.stringify({title:story.title,subtitle:story.subtitle,coverImage:story.coverImage,pages:story.pages})});setStory(fresh);setStories(list=>list.map(x=>x._id===fresh._id?fresh:x));await refreshStories()}catch(e){alert(e.message)}};
  const update=(key,value)=>setStory(s=>({...s,pages:s.pages.map((p,i)=>i===pageIndex?{...p,[key]:value}:p)}));
  const upload=async(file,setter)=>{if(!file)return;const preview=URL.createObjectURL(file);setter(preview);if(token){try{const fd=new FormData();fd.append('image',file);const r=await fetch(`${api}/upload`,{method:'POST',headers:{Authorization:`Bearer ${token}`},body:fd});if(r.ok)setter((await r.json()).url)}catch{}}};
- const turnPage=next=>{if(next===pageIndex||next<0||next>=story.pages.length)return;setPageLoading(true);setTimeout(()=>{setPageIndex(next);setPageLoading(false)},800)}; const p=story.pages[pageIndex]||blankPage();
+ const turnPage=next=>{if(next===pageIndex||next<0||next>=story.pages.length)return;setPageLoading(true);setTimeout(()=>{setPageIndex(next);setPageLoading(false); window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth", // use "auto" for instant scrolling
+    });
+  }, 800)};
+ const p=story.pages[pageIndex]||blankPage();
  return <><div className="star-field"/>{pageLoading&&<div className="page-loader" aria-label="Turning the page"><span className="loader-moon"/><p>turning the page</p></div>}<header><button className="brand" onClick={() => {
     window.scrollTo({
       top: 0,
