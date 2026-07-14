@@ -1,0 +1,6 @@
+.modal { pointer-events: auto; }
+.modal form { pointer-events: auto; }
+.auth-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin: 0 0 13px; padding: 4px; border: 1px solid var(--line); border-radius: 12px; background: rgba(4,8,27,.33); }
+.auth-tabs button { position: relative; z-index: 1; min-height: 38px; border: 0; border-radius: 8px; background: transparent; color: var(--muted); font-size: 12px; transition: background .2s, color .2s, box-shadow .2s; }
+.auth-tabs button:hover { color: var(--ink); background: rgba(185,201,255,.09); }
+.auth-tabs button.active { background: rgba(185,201,255,.93); color: #101735; box-shadow: 0 3px 10px rgba(0,0,0,.22); }
