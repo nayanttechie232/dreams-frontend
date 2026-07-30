@@ -67,29 +67,42 @@ button:active { transform: translateY(1px) scale(.98); }
 
 /* Mobile reading scale: approximately 30% larger across every text surface. */
 @media (max-width: 720px) {
-  .brand { font-size: 41px; }
-  nav button, .hero-button, .edit-btn, footer button, .back, .end-review-button { font-size: 18px; }
-  .eyebrow { font-size: 15px; letter-spacing: 1.6px; }
-  .hero h1 { font-size: 68px; letter-spacing: -2px; }
-  .hero > p:not(.eyebrow) { font-size: 23px; }
-  .library-head > p:last-child, .story-card em, .admin-intro, .auth-copy { font-size: 18px; }
-  .story-card small, .cover p, .byline, footer { font-size: 16px; }
-  .story-card strong { font-size: 40px; }
-  .story-head h1, .story-head input { font-size: 55px; }
-  .story-head .subtitle-input, .subtitle { font-size: 21px; }
-  .cover strong { font-size: 49px; }
-  .text-block p, textarea { font-size: 27px; line-height: 1.5; }
-  .cover label span, .image-block label span { font-size: 16px; }
-  .modal h2, .card-review-panel h2 { font-size: 50px; }
-  .modal input, .modal textarea, .review-modal textarea { font-size: 21px; }
-  .auth-tabs button, .submit, .switch { font-size: 18px; }
-  .admin-page h1 { font-size: 56px; }
-  .dream-row strong, .request-row strong, .visit-row strong, .review-row strong { font-size: 31px; }
-  .dream-row small, .request-row small, .visit-row time, .review-row time { font-size: 16px; }
-  .delete, .visit-button, .approve, .reject { font-size: 18px; }
-  .visit-card strong { font-size: 23px; }
-  .review-row p, .card-popup-review p { font-size: 21px; }
-  .card-popup-review strong { font-size: 27px; }
-  .card-popup-review time { font-size: 16px; }
-  .no-visits, .empty-dreams span, .dreams-loader p, .dreams-loader small, .notice, .error { font-size: 17px; }
+  header { height: auto; min-height: 118px; flex-wrap: wrap; gap: 9px; padding-top: 10px; padding-bottom: 10px; }
+  header nav { flex-wrap: wrap; justify-content: flex-end; }
+  .brand { font-size: 82px; }
+  nav button, .hero-button, .edit-btn, footer button, .back, .end-review-button { font-size: 36px; }
+  .eyebrow { font-size: 30px; letter-spacing: 2px; }
+  .hero h1 { font-size: 136px; letter-spacing: -3px; }
+  .hero > p:not(.eyebrow) { font-size: 46px; }
+  .library-head > p:last-child, .story-card em, .admin-intro, .auth-copy { font-size: 36px; }
+  .story-card small, .cover p, .byline, footer { font-size: 32px; }
+  .story-card strong { font-size: 80px; }
+  .story-head h1, .story-head input { font-size: 110px; }
+  .story-head .subtitle-input, .subtitle { font-size: 42px; }
+  .cover strong { font-size: 98px; }
+  .text-block p, textarea { font-size: 54px; line-height: 1.45; }
+  .cover label span, .image-block label span { font-size: 32px; }
+  .modal h2, .card-review-panel h2 { font-size: 100px; }
+  .modal input, .modal textarea, .review-modal textarea { font-size: 42px; }
+  .auth-tabs button, .submit, .switch { font-size: 36px; }
+  .admin-page h1 { font-size: 112px; }
+  .dream-row strong, .request-row strong, .visit-row strong, .review-row strong { font-size: 62px; }
+  .dream-row small, .request-row small, .visit-row time, .review-row time { font-size: 32px; }
+  .delete, .visit-button, .approve, .reject { font-size: 36px; }
+  .visit-card strong { font-size: 46px; }
+  .review-row p, .card-popup-review p { font-size: 42px; }
+  .card-popup-review strong { font-size: 54px; }
+  .card-popup-review time { font-size: 32px; }
+  .no-visits, .empty-dreams span, .dreams-loader p, .dreams-loader small, .notice, .error { font-size: 34px; }
+
+  /* Triple the current mobile scale inside the dream reader only. */
+  .reader .story-head h1, .reader .story-head input { font-size: 330px; }
+  .reader .story-head .subtitle-input, .reader .subtitle { font-size: 126px; }
+  .reader .byline { font-size: 96px; }
+  .reader .cover p { font-size: 96px; }
+  .reader .cover strong { font-size: 294px; }
+  .reader .text-block p, .reader textarea { font-size: 162px; line-height: 1.3; }
+  .reader .cover label span, .reader .image-block label span { font-size: 96px; }
+  .reader footer { font-size: 96px; }
+  .reader footer button, .reader .back, .reader .edit-btn, .end-review-button { font-size: 108px; }
 }
