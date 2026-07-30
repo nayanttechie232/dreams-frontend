@@ -64,3 +64,32 @@ button:active { transform: translateY(1px) scale(.98); }
 @media (max-width: 720px) { .reader .d1, .reader .d4 { height: 271px; }.reader .d2, .reader .d3 { height: 581px; }.reader .text-block { padding: 20px; }.reader .cover { height: 195px; } }
 
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
+
+/* Mobile reading scale: approximately 30% larger across every text surface. */
+@media (max-width: 720px) {
+  .brand { font-size: 36px; }
+  nav button, .hero-button, .edit-btn, footer button, .back, .end-review-button { font-size: 16px; }
+  .eyebrow { font-size: 13px; letter-spacing: 1.5px; }
+  .hero h1 { font-size: 59px; letter-spacing: -2px; }
+  .hero > p:not(.eyebrow) { font-size: 20px; }
+  .library-head > p:last-child, .story-card em, .admin-intro, .auth-copy { font-size: 16px; }
+  .story-card small, .cover p, .byline, footer { font-size: 14px; }
+  .story-card strong { font-size: 35px; }
+  .story-head h1, .story-head input { font-size: 48px; }
+  .story-head .subtitle-input, .subtitle { font-size: 18px; }
+  .cover strong { font-size: 43px; }
+  .text-block p, textarea { font-size: 23px; line-height: 1.55; }
+  .cover label span, .image-block label span { font-size: 14px; }
+  .modal h2, .card-review-panel h2 { font-size: 44px; }
+  .modal input, .modal textarea, .review-modal textarea { font-size: 18px; }
+  .auth-tabs button, .submit, .switch { font-size: 16px; }
+  .admin-page h1 { font-size: 49px; }
+  .dream-row strong, .request-row strong, .visit-row strong, .review-row strong { font-size: 27px; }
+  .dream-row small, .request-row small, .visit-row time, .review-row time { font-size: 14px; }
+  .delete, .visit-button, .approve, .reject { font-size: 16px; }
+  .visit-card strong { font-size: 20px; }
+  .review-row p, .card-popup-review p { font-size: 18px; }
+  .card-popup-review strong { font-size: 23px; }
+  .card-popup-review time { font-size: 14px; }
+  .no-visits, .empty-dreams span, .dreams-loader p, .dreams-loader small, .notice, .error { font-size: 15px; }
+}
